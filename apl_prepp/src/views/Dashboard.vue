@@ -1,31 +1,35 @@
 <template>
   <div>
     <h1>This is DASHBOARD</h1>
+    <CircleButton/>
     <div id="chart_div">
       <GChart
-        type="ColumnChart"
-        :data="chartData"
-        :options="chartOptions"
+       type="LineChart"
+       :data="chartData"
+       :options="chartOptions"
       />
+
     </div>
   </div>
 </template>
 
 <script>
-import { GChart } from 'vue-google-charts'
+import CircleButton from '../components/CircleButton.vue'
+import { GChart } from 'vue-google-charts';
 
 export default {
   name: 'Dashboard',
 
   components: {
-    GChart
+    GChart,
+    CircleButton
   },
 
-  data () {
+   data () {
     return {
       // Array will be automatically processed with visualization.arrayToDataTable function
       chartData: [
-        ['Year', 'Sales', 'Expenses', 'Profit'],
+        ['Gün', 'Harcama', 'Expenses', 'Profit'],
         ['2014', 1000, 400, 200],
         ['2015', 1170, 460, 250],
         ['2016', 660, 1120, 300],
