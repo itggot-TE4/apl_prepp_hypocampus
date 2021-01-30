@@ -1,31 +1,33 @@
 <template>
   <div>
+    <Navbar />
     <h1>This is DASHBOARD</h1>
-    <CircleButton/>
+    <CircleButton />
     <div id="chart_div">
       <GChart
-       type="LineChart"
-       :data="chartData"
-       :options="chartOptions"
+        type="LineChart"
+        :data="chartData"
+        :options="chartOptions"
       />
-
     </div>
   </div>
 </template>
 
 <script>
+import { GChart } from 'vue-google-charts'
 import CircleButton from '../components/CircleButton.vue'
-import { GChart } from 'vue-google-charts';
+import Navbar from '../components/Navbar.vue'
 
 export default {
   name: 'Dashboard',
 
   components: {
     GChart,
-    CircleButton
+    CircleButton,
+    Navbar
   },
 
-   data () {
+  data () {
     return {
       // Array will be automatically processed with visualization.arrayToDataTable function
       chartData: [
@@ -38,14 +40,10 @@ export default {
       chartOptions: {
         chart: {
           title: 'Company Performance',
-          subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          subtitle: 'Sales, Expenses, and Profit: 2014-2017'
         }
       }
     }
   }
-
-
-
-
 }
 </script>
