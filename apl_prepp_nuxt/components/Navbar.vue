@@ -2,6 +2,7 @@
   <div class="nav">
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
+    <a href="/welcome">Welcome page</a>
   </div>
 </template>
 

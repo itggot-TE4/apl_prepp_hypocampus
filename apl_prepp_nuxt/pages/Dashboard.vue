@@ -2,7 +2,6 @@
   <div>
     <Navbar />
     <h1>This is DASHBOARD</h1>
-    <CircleButton />
     <div id="chart_div">
       <GChart
         type="LineChart"
@@ -15,7 +14,6 @@
 
 <script>
 import { GChart } from 'vue-google-charts'
-import CircleButton from '../components/CircleButton.vue'
 import Navbar from '../components/Navbar.vue'
 
 export default {
@@ -23,7 +21,6 @@ export default {
 
   components: {
     GChart,
-    CircleButton,
     Navbar
   },
 
